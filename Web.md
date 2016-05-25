@@ -39,12 +39,17 @@ We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It 
 Once a message is submitted we're redirected a page with this text:
 >Thank you, your request has been received
 Your message to the admins is as follows:
+
 !!! Expecting to find '<script src=.' in your input -- please re-read the level challenge.
 
 This could be a hint... `<script src=.`
+
 An XSS vector could work here to steal a user's session cookie, such as the admin
+
 The best way to perform an XSS attack here is to trick the page into outputting data we enter
+
 The webpage displays an error message when we don't enter information that meets its rules
+
 The error message contains exact text we enter which is what generally leads to XSS in any situation
 
 Let's test it out with script in the justification box:
@@ -92,7 +97,9 @@ Let's try to trick the webpage into thinking we are the administrator.
 We can create our own md5hash of the username: admin
 
 [This site works](http://md5cracker.org/create-md5)
+
 Edit our current cookie for the username we registered and change it to our new hashed form of admin.
+
 To do this we need to download a quick Cookie editor extension. I used EditThisCookie which is a free Chrome extension. We can remove it when we are done with this CTF challenge, or not. Then, change the value of our cookie to the hashed admin value.
 
 Now when we go to /admin the webpage says:
