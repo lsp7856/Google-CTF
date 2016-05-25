@@ -38,9 +38,10 @@ We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It 
 
 Once a message is submitted we're redirected a page with this text:
 >Thank you, your request has been received
-Your message to the admins is as follows:
 
-!!! Expecting to find '<script src=.' in your input -- please re-read the level challenge.
+>Your message to the admins is as follows:
+
+>!!! Expecting to find '<script src=.' in your input -- please re-read the level challenge.
 
 This could be a hint... `<script src=.`
 
