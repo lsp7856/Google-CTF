@@ -22,7 +22,7 @@ Disallow: /deep-blue-sea/team/lines
 Disallow: /deep-blue-sea/team/runes
 Disallow: /deep-blue-sea/team/vendors`
 
-We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [an example](http://www.golemtechnologies.com/articles/prevent-xss "XSS") XSS (Cross-Site Scripting)
+We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [What is XSS](http://www.golemtechnologies.com/articles/prevent-xss "XSS") (Cross-Site Scripting)
 ><em>XSS</em> - enables attackers to inject client-side scripts into web pages viewed by other users
 
 Once a message is submitted we're redirected a page with this text:
