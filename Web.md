@@ -15,13 +15,21 @@ brings us to a page of interesting links
 Robots.txt is a file sites usually have to give instructions to web robots
 Disallows web robots from visiting certain pages of the site
 >User-agent: *
+
 >Disallow: /deep-blue-sea/
+
 >Disallow: /deep-blue-sea/team/
+
 >//Yes, these are alphabet puns :)
+
 >Disallow: /deep-blue-sea/team/characters
+
 >Disallow: /deep-blue-sea/team/paragraphs
+
 >Disallow: /deep-blue-sea/team/lines
+
 >Disallow: /deep-blue-sea/team/runes
+
 >Disallow: /deep-blue-sea/team/vendors
 
 We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [XSS](http://www.golemtechnologies.com/articles/prevent-xss "XSS") (Cross-Site Scripting)
