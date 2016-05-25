@@ -12,6 +12,8 @@ Nothing too interesting.
 
 https://wallowing-wallabies.ctfcompetition.com/robots.txt
 brings us to a page of interesting links
+Robots.txt is a file sites usually have to give instructions to web robots
+Disallows web robots from visiting certain pages of the site
 >User-agent: *
 Disallow: /deep-blue-sea/
 Disallow: /deep-blue-sea/team/
@@ -31,8 +33,13 @@ Your message to the admins is as follows:
 !!! Expecting to find '<script src=.' in your input -- please re-read the level challenge.
 
 This could be a hint... `<script src=.`
-An XSS vector could work here to steal the admin's cookie
+An XSS vector could work here to steal a user's session cookie, such as the admin
+The best way to perform an XSS attack here is to trick the page into outputting data we enter
+The webpage displays an error message when we don't enter information that meets its rules
+The error message contains exact text we enter which is what generally leads to XSS in any situation
+
+To perform espionage against this site, which is our main goal, it would be pretty destructive if we were able to get a hold of the admin's session data from the cookie then try to use the session to impersonate and login as the admin
 
 
 ##Ernst Echidna
->
+>Can you hack [this](http://ernst-echidna.ctfcompetition.com "this") website? The robots.txt sure looks interesting.
