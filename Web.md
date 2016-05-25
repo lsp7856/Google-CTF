@@ -6,6 +6,7 @@
 >*Please note* Please do not run automated scanners against the target - that's not the intended solution. Instead, perhaps look up "xss cookie catching", "xss cookie stealing" and other documents along those lines. Thanks!
 
 We're brought to a home page.
+![Homepage](https://www.dropbox.com/s/4aoip8xxmsbv59q/CTF1.png?dl=0)
 Viewing the Source Code of the page could be helpful to start out.
 Nothing too interesting.
 
@@ -21,8 +22,11 @@ Disallow: /deep-blue-sea/team/lines
 Disallow: /deep-blue-sea/team/runes
 Disallow: /deep-blue-sea/team/vendors`
 
-We can submit a message on this page. It is vulnerable to XSS (Cross-Site Scripting)
+We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to XSS (Cross-Site Scripting)
 ><em>XSS</em> - enables attackers to inject client-side scripts into web pages viewed by other users
+
+Once a message is submitted we're redirected to another page.
+
 
 ##Ernst Echidna
 >
