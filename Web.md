@@ -11,15 +11,15 @@ Nothing too interesting.
 
 https://wallowing-wallabies.ctfcompetition.com/robots.txt
 brings us to a page of interesting links
->>User-agent: *
+`User-agent: *
 Disallow: /deep-blue-sea/
 Disallow: /deep-blue-sea/team/
-# Yes, these are alphabet puns :)
+//Yes, these are alphabet puns :)
 Disallow: /deep-blue-sea/team/characters
 Disallow: /deep-blue-sea/team/paragraphs
 Disallow: /deep-blue-sea/team/lines
 Disallow: /deep-blue-sea/team/runes
-Disallow: /deep-blue-sea/team/vendors
+Disallow: /deep-blue-sea/team/vendors`
 
 We can submit a message on this page. It is vulnerable to XSS (Cross-Site Scripting)
 ><em>XSS</em> - enables attackers to inject client-side scripts into web pages viewed by other users
