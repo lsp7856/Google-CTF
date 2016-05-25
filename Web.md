@@ -12,7 +12,7 @@ Nothing too interesting.
 
 https://wallowing-wallabies.ctfcompetition.com/robots.txt
 brings us to a page of interesting links
-`User-agent: *
+>User-agent: *
 Disallow: /deep-blue-sea/
 Disallow: /deep-blue-sea/team/
 //Yes, these are alphabet puns :)
@@ -20,15 +20,15 @@ Disallow: /deep-blue-sea/team/characters
 Disallow: /deep-blue-sea/team/paragraphs
 Disallow: /deep-blue-sea/team/lines
 Disallow: /deep-blue-sea/team/runes
-Disallow: /deep-blue-sea/team/vendors`
+Disallow: /deep-blue-sea/team/vendors
 
-We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [What is XSS](http://www.golemtechnologies.com/articles/prevent-xss "XSS") (Cross-Site Scripting)
+We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [XSS](http://www.golemtechnologies.com/articles/prevent-xss "XSS") (Cross-Site Scripting)
 ><em>XSS</em> - enables attackers to inject client-side scripts into web pages viewed by other users
 
 Once a message is submitted we're redirected a page with this text:
 >Thank you, your request has been received
 Your message to the admins is as follows:
-!!! Expecting to find '<script src=' in your input -- please re-read the level challenge.
+!!! Expecting to find '<script src=.' in your input -- please re-read the level challenge.
 
 This could be a hint... `<script src=.`
 An XSS vector could work here to steal the admin's cookie
