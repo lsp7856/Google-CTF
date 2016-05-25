@@ -1,25 +1,25 @@
-### Reverse Engineering
+## Reverse Engineering
 
 
-Leeky Pipes - Protected Secrets
+###Leeky Pipes - Protected Secrets
 > notes
 
-Leeky Pipes - User Manager<br>
+###Leeky Pipes - User Manager<br>
 > notes
 
-Guess Me<br>
+###Guess Me<br>
 > notes
 
-Unbreakable Enterprise Product Activation<br>
+###Unbreakable Enterprise Product Activation<br>
 > We need help activating this product – we’ve lost our license key :( 
 
 > You're our only hope!
 
-> Basically, we're given a *Binary (application/octet-stream)*
+Basically, we're given a *Binary (application/octet-stream)*
 
-> The file is 19.5 kb (19,456 bytes) in size
+The file is 19.5 kb (19,456 bytes) in size
 
-> The file was downloaded and extracted to the Desktop
+The file was downloaded and extracted to the Desktop
 
 > Step 1: I want to see what is in the file
 
@@ -40,8 +40,8 @@ Unbreakable Enterprise Product Activation<br>
 
 
 
-Audio Visual Receiver Code<br>
+##Audio Visual Receiver Code<br>
 > notes
 
-Explosive Decompression<br>
+##Explosive Decompression<br>
 > notes
