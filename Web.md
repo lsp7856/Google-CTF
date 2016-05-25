@@ -59,3 +59,4 @@ What if we revisit the admin page?
 >Sorry, this interface is restricted to administrators only
 Revisit the home page...The site is keeping track that we are now a registered member. This is a sign that it is holding our cookie. There is a possibility that the site also holds the admin's cookie too.
 Go to the Pad-Lock in the URL bar, and view the cookies for this site.
+![](https://github.com/lsp7856/Google-CTF/blob/master/Screen%20Shot%202016-05-25%20at%201.45.50%20PM.png?raw=true)
