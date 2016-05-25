@@ -38,6 +38,11 @@ The best way to perform an XSS attack here is to trick the page into outputting 
 The webpage displays an error message when we don't enter information that meets its rules
 The error message contains exact text we enter which is what generally leads to XSS in any situation
 
+Let's test it out with this script in the justification box:
+`<script src="bootstrap.min.js">`
+`</script>`
+`<script> alert("test")</script>`
+
 To perform espionage against this site, which is our main goal, it would be pretty destructive if we were able to get a hold of the admin's session data from the cookie then try to use the session to impersonate and login as the admin
 
 
