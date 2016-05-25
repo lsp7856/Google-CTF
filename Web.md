@@ -107,7 +107,17 @@ Let's use the given username and password to login and look around.
 >password: strobe.c
 
 Documents Available
+
 Below is the documents available to you!
 * International Subversives
 * Worms Against Nuclear Killers
 * Underground
+
+Once we're logged in, we can see the site stores two cookies during one session
+1. APISESSIONID
+2. SSOSESSIONID
+
+The hashed APISESSIONID: dHlwZT1wcm9mZiZpZHg9MSZjPTU2JnVpZD04OTVjdHg9MjE3NyZoYXNoPTM1NmY3ODk5Y2M1MmRmNjAxNjY3YzdiOTUxNzE2ZDRjMGE3MzhmNjEwYTRlMzQxNWEyYzdlZDU3ZmMwNGUyNjQ=
+
+We can try to manipulate this to become the hashed admin value again like we did in a previous challenge
+[help](https://github.com/VulnHub/ctf-writeups/blob/master/2016/google-ctf/Dancing%20Dingoes.md)
