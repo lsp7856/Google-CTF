@@ -46,17 +46,25 @@ To perform espionage against this site, which is our main goal, it would be pret
 
 Let's begin by taking up the hint and taking a look at the robots.txt page
 >`Disallow: /admin`
+
 Let's check out the admin page since it seems to be the only one the site doesn't want robots to see
 >You are not logged in!
+
 True...
+
 Our best option is to try registering for an account back on the home page.
+
 We can take a look at the source code, but there's not much there to see. Just a standard username/password screen, nothing hidden in the HTML.
+
 After registering, a page appears that says:
 >Welcome
 >Thank you for registering!
 >Unfortunately, there has been no content posted on this site
+
 What if we revisit the admin page?
 >Sorry, this interface is restricted to administrators only
+
 Revisit the home page...The site is keeping track that we are now a registered member. This is a sign that it is holding our cookie. There is a possibility that the site also holds the admin's cookie too.
+
 Go to the Pad-Lock in the URL bar, and view the cookies for this site.
 ![](https://github.com/lsp7856/Google-CTF/blob/master/Screen%20Shot%202016-05-25%20at%201.45.50%20PM.png?raw=true)
