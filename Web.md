@@ -68,3 +68,20 @@ Revisit the home page...The site is keeping track that we are now a registered m
 
 Go to the Pad-Lock in the URL bar, and view the cookies for this site.
 ![](https://github.com/lsp7856/Google-CTF/blob/master/Screen%20Shot%202016-05-25%20at%201.45.50%20PM.png?raw=true)
+md5-hash is the name of our cookie
+
+There's a hashed form of md5-hash given to us too under Content
+
+We can try to crack this md5 hash, [md5cracker.org](http://md5cracker.org) works fine
+
+Let's try to trick the webpage into thinking we are the administrator.
+
+We can create our own md5hash of the username: admin
+
+[This site works](http://md5cracker.org/create-md5)
+Edit our current cookie for the username we registered and change it to our new hashed form of admin.
+To do this we need to download a quick Cookie editor extension. I used EditThisCookie which is a free Chrome extension. We can remove it when we are done with this CTF challenge, or not. Then, change the value of our cookie to the hashed admin value.
+
+Now when we go to /admin the webpage says:
+>The authentication server says..
+>Congratulations, your token is 'CTF{renaming-a-bunch-of-levels-sure-is-annoying}'
