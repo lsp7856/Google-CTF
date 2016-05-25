@@ -93,3 +93,21 @@ To do this we need to download a quick Cookie editor extension. I used EditThisC
 Now when we go to /admin the webpage says:
 >The authentication server says..
 >Congratulations, your token is 'CTF{renaming-a-bunch-of-levels-sure-is-annoying}'
+
+##Dancing Dingoes
+>We're interested in finding out what information is stored on [this](https://dancing-dingoes.ctfcompetition.com/) website. We've already obtained the username "proff" and the password "strobe.c", but can't work out how to access the "admin" user. Any ideas?
+
+We're given a basic login screen to begin with. We can always start by looking at the source code.
+A css Style Sheet is accessible, might not be too useful, but its there.
+
+Even if we try to visit other webpages on the site (robots.txt) we are blocked by the same username/password login screen.
+
+Let's use the given username and password to login and look around.
+>username: proff
+>password: strobe.c
+
+Documents Available
+Below is the documents available to you!
+* International Subversives
+* Worms Against Nuclear Killers
+* Underground
