@@ -41,7 +41,7 @@ The error message contains exact text we enter which is what generally leads to 
 To perform espionage against this site, which is our main goal, it would be pretty destructive if we were able to get a hold of the admin's session data from the cookie then try to use the session to impersonate and login as the admin
 
 
-##Ernst Echidna
+##✓ Ernst Echidna
 >Can you hack [this](http://ernst-echidna.ctfcompetition.com "this") website? The robots.txt sure looks interesting.
 
 Let's begin by taking up the hint and taking a look at the robots.txt page
