@@ -10,9 +10,10 @@ We're brought to a home page.
 Viewing the Source Code of the page could be helpful to start out.
 Nothing too interesting.
 
-https://wallowing-wallabies.ctfcompetition.com/robots.txt
-brings us to a page of interesting links
+https://wallowing-wallabies.ctfcompetition.com/robots.txt brings us to a page of interesting links
+
 Robots.txt is a file sites usually have to give instructions to web robots
+
 Disallows web robots from visiting certain pages of the site
 >User-agent: *
 
