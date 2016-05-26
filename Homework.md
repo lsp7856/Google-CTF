@@ -87,4 +87,4 @@ To find the main() function- it should be the last argument passed into libc
 
 Now that we have the main() function, we need to disassemble it
 
-![Using GDB to debug stripped binaries](http://felix.abecassis.me/2012/08/gdb-debugging-stripped-binaries/)
+[Using GDB to debug stripped binaries](http://felix.abecassis.me/2012/08/gdb-debugging-stripped-binaries/)
