@@ -91,11 +91,10 @@ Now that we have the main() function, we need to disassemble it
 
 >Create a txt file with the code
 
-><code>#include <stdio.h>
-> __attribute__ ((noinline)) void fun(int test)
->{
-
->  printf("value: %d\n", test);
+>#include <stdio.h> <br>
+> __attribute__ ((noinline)) void fun(int test) <br>
+>{ <br>
+>  printf("value: %d\n", test); <br>
 
 >}
 > 
