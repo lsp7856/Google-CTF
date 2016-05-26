@@ -88,3 +88,26 @@ To find the main() function- it should be the last argument passed into libc
 Now that we have the main() function, we need to disassemble it
 
 [Using GDB to debug stripped binaries](http://felix.abecassis.me/2012/08/gdb-debugging-stripped-binaries/)
+
+>Create a txt file with the code
+
+><code>#include <stdio.h>
+ 
+> __attribute__ ((noinline)) void fun(int test)
+
+>{
+
+>  printf("value: %d\n", test);
+
+>}
+> 
+>
+>int main()
+
+>{
+
+>  int v = 21;
+
+>  fun(v);
+
+>}
