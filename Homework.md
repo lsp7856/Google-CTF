@@ -91,17 +91,18 @@ Now that we have the main() function, we need to disassemble it
 
 >Create a txt file with the code
 
-><code>#include <stdio.h></code> <br>
-><code>__attribute__ ((noinline)) void fun(int test)</code> <br>
-><code>{</code> <br>
-><code>  printf("value: %d\n", test);</code> <br>
-><code>}</code> <br>
-><code> </code> <br>
-><code> </code> <br>
-><code>int main()</code> <br>
-><code>{</code> <br>
-><code>  int v = 21;</code> <br>
-><code>  fun(v);</code> <br>
-><code>}</code>
+>><code>#include <stdio.h></code> <br>
+>><code>__attribute__ ((noinline)) void fun(int test)</code> <br>
+>><code>{</code> <br>
+>><code>  printf("value: %d\n", test);</code> <br>
+>><code>}</code> <br>
+>><code> </code> <br>
+>><code> </code> <br>
+>><code>int main()</code> <br>
+>><code>{</code> <br>
+>><code>  int v = 21;</code> <br>
+>><code>  fun(v);</code> <br>
+>><code>}</code>
 
+Save it as <code>test.c</code>
 
