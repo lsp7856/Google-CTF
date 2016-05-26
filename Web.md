@@ -150,5 +150,16 @@ You can encode binary, transmit it over something expecting ascii, and the other
 
 Base64 is alphanumeric - it has 'padding' at the end, somewhere between 0-3 '='
 
-We can decode the hashed APISESSIONID using Python.
+We can decode the hashed APISESSIONID using a [Base64 decoder/encoder](https://www.base64decode.org/) (or we could write the program in Python)
+
+Decoding it to UTF-8 we get:
+
+>type=proff&idx=1&c=56&uid=895ctx=2177&hash=356f7899cc52df601667c7b951716d4c0a738f610a4e3415a2c7ed57fc04e264
+
+To display it all more clearly, we have:
+* type=proff
+* idx=1
+* c=56
+* uid=895ctx=2177
+* hash=356f7899cc52df601667c7b951716d4c0a738f610a4e3415a2c7ed57fc04e264
 
