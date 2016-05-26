@@ -132,4 +132,23 @@ Once we're logged in, we can see the site stores two cookies during one session
 
 The hashed APISESSIONID: dHlwZT1wcm9mZiZpZHg9MSZjPTU2JnVpZD04OTVjdHg9MjE3NyZoYXNoPTM1NmY3ODk5Y2M1MmRmNjAxNjY3YzdiOTUxNzE2ZDRjMGE3MzhmNjEwYTRlMzQxNWEyYzdlZDU3ZmMwNGUyNjQ=
 
-We can try to manipulate this to become the hashed admin value again like we did in a previous challenge
+We can try to manipulate this hashed APISESSIONID cookie to become the hashed admin value again like we did in a previous challenge.
+
+When we check to see what requests are actually sent to the site when logging in, 
+
+
+
+The site is working with a Plain-text Protocol which can be messed up with binary.
+If the URL had binary in it, the protocol could be messed up if a linebreak was used for instance.
+> 0x0A (\n)
+
+Base64 represents binary data in ascii. We can encode binary and transmit it over something expecting ascii.
+
+It will be decoded on the other end to get it back to the raw binary
+
+You can encode binary, transmit it over something expecting ascii, and the other end can decode it to get it back to the raw binary
+
+Base64 is alphanumeric - it has 'padding' at the end, somewhere between 0-3 '='
+
+We can decode the hashed APISESSIONID using Python.
+
