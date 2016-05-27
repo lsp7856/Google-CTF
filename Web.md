@@ -185,10 +185,14 @@ To display it all more clearly, we have:
 * hash=356f7899cc52df601667c7b951716d4c0a738f610a4e3415a2c7ed57fc04e264
 
 SSOSESSIONID
-type=session&idx=6&c=136&uid=350ctx=2213&hash=d2260600d4076a31fdd7514b08706741b7cc054faebec4cc3cbb930c9381d238
-type=session
-idx=6
-c=136
-uid=350ctx=2213
-hash=d2260600d4076a31fdd7514b08706741b7cc054faebec4cc3cbb930c9381d238
+* type=session&idx=6&c=136&uid=350ctx=2213&hash=d2260600d4076a31fdd7514b08706741b7cc054faebec4cc3cbb930c9381d238
+* type=session
+* idx=6
+* c=136
+* uid=350ctx=2213
+* hash=d2260600d4076a31fdd7514b08706741b7cc054faebec4cc3cbb930c9381d238
+
+Another thing to note, when logging in, we can see the site is communicating with the API
+
+>/api/users/login?domain=
 
