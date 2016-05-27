@@ -34,9 +34,9 @@ Disallows web robots from visiting certain pages of the site
 >Disallow: /deep-blue-sea/team/vendors
 
 We can submit a message on the `Disallow: /deep-blue-sea/team/vendors` page. It is vulnerable to [XSS](http://www.golemtechnologies.com/articles/prevent-xss "XSS") (Cross-Site Scripting)
-><em>XSS</em> - enables attackers to inject client-side scripts into web pages viewed by other users
+><em>XSS</em> enables attackers to inject client-side scripts into web pages viewed by other users
 
-Once a message is submitted we're redirected a page with this text:
+Once a message is submitted we're redirected to a page with this text:
 >Thank you, your request has been received
 
 >Your message to the admins is as follows:
@@ -45,19 +45,21 @@ Once a message is submitted we're redirected a page with this text:
 
 This could be a hint... `<script src=.`
 
-An XSS vector could work here to steal a user's session cookie, such as the admin
+An XSS vector could work here to steal a user's session cookie, such as the admin's
 
-The best way to perform an XSS attack here is to trick the page into outputting data we enter
+The best way to perform an XSS attack here is to trick the page into outputting data we enter (using JavaScript to get the admin's cookie)
 
 The webpage displays an error message when we don't enter information that meets its rules
 
 The error message contains exact text we enter which is what generally leads to XSS in any situation
 
-Let's test it out with script in the justification box:
+Let's test it out with script in the justification box. We know the script has to start with `<script src= `.
 
->script???
+Google Chrome comes with a Developer Tool called Javascript Console that can be used to figure out what script got through to the site.
 
-To perform espionage against this site, which is our main goal, it would be pretty destructive if we were able to get a hold of the admin's session data from the cookie then try to use the session to impersonate and login as the admin
+To figure out what got through the filter, we can use [this site's xss script](http://www.smeegesec.com/2012/06/collection-of-cross-site-scripting-xss.html) as test script then look for lines where Chrome's built-in XSS audtiory blocked the execution.
+
+For a better understanding of how XSS works, [this site](http://www.go4expert.com/articles/stealing-cookie-xss-t17066/) was also helpful and included PHP script to steal the admin's cookie.
 
 
 ##✓ Ernst Echidna
