@@ -1,6 +1,6 @@
 #Web
 
-##Wallowing Wallabies - Part One
+##✓ Wallowing Wallabies - Part One
 >Wallowing Wallabies provides enterprise contract management - we'd like to find out how easy it is to perform corporate espionage against them. Visit them here.
 
 >*Please note* Please do not run automated scanners against the target - that's not the intended solution. Instead, perhaps look up "xss cookie catching", "xss cookie stealing" and other documents along those lines. Thanks!
@@ -60,6 +60,25 @@ Google Chrome comes with a Developer Tool called Javascript Console that can be 
 To figure out what got through the filter, we can use [this site's xss script](http://www.smeegesec.com/2012/06/collection-of-cross-site-scripting-xss.html) as test script then look for lines where Chrome's built-in XSS audtiory blocked the execution.
 
 For a better understanding of how XSS works, [this site](http://www.go4expert.com/articles/stealing-cookie-xss-t17066/) was also helpful and included PHP script to steal the admin's cookie.
+
+A free-hosting web server would be necessary in this situation to upload the cookier stealer PHP file and log file to.
+
+The payload in the script gets sent to the admin as a message. The stolen cookie will be saved on the hosting web server using the PHP script.
+In a few minutes, the log on the web server will contain the stolen admin cookie after the site's admin 'reads' the message.
+
+>`green-mountains=eyJub25jZSI6ImUxNjgwMjcyYTcxNDE3MjMiLCJhbGxvd2VkIjoiXi9kZWVwLWJsdWUtc2VhL3RlYW0vdmVuZG9ycy4qJCIsImV4cGlyeSI6MTQ2MjAzMTg2OH0=|1462031865|d985a99f12846cd73da3b9b01b3b921fd15512e3`
+
+Viewing the site's cookies after using the script, we see our cookie has the same value of the green-mountains one.
+
+Refresh the page with the stolen cookie.
+
+The site is redirected to the flag.
+
+>part 1: CTF{feeling_robbed_of_your_cookies}
+
+>Vendor management roles available:
+
+>All vendors have been deprecated!
 
 
 ##✓ Ernst Echidna
