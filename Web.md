@@ -280,3 +280,7 @@ Lastly, modify the obsoletePickle cookie on the site to this hashed value then l
 
 >Your flag is CTF{but_wait,theres_more.if_you_call} ... but is there more(1)? or less(1)?
 
+##In Recorded Conversation
+>Can you find the flag?
+
+We are given a file to download called irc.pcap
