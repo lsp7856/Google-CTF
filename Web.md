@@ -196,7 +196,7 @@ Another thing to note, when logging in, we can see the site is communicating wit
 
 >/api/users/login?domain=
 
-##√ Spotted Quoll
+##✓ Spotted Quoll
 >[This](https://spotted-quoll.ctfcompetition.com/) blog on Zombie research looks like it might be interesting - can you break into the /admin section?
 
 We're brought to a blog page "My Zombie Research Project"
