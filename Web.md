@@ -196,3 +196,68 @@ Another thing to note, when logging in, we can see the site is communicating wit
 
 >/api/users/login?domain=
 
+##Spotted Quoll
+>![This](https://spotted-quoll.ctfcompetition.com/) blog on Zombie research looks like it might be interesting - can you break into the /admin section?
+
+We're brought to a blog page "My Zombie Research Project"
+
+A body of text says "I don't have much content yet, except for my admin page..."
+
+Clicking the Admin button at the top of the page redirects us nowhere but the url says "#err_user_not_found"
+
+Simply going to `/admin` does not work either.
+
+Looking at the page's source code, we see there is a page `/getCookie`
+>`<iframe style="border: 0;" src="/getCookie"></iframe>`
+
+When going to this page though, it is blank. Even its source code is empty. It should be noted though as it might come in use later.
+
+If we look at the cookies being stored on this blog's homepage we see that there is one titled `obsoletePickle`
+>`Content: KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu`
+
+When we decode this hashed value using an online decoder such as ![this one](https://www.base64decode.org/) we get this:
+>(dp1
+
+>S'python'
+
+>p2
+
+>S'pickles'
+
+>p3
+
+>sS'subtle'
+
+>p4
+
+>S'hint'
+
+>p5
+
+>sS'user'
+
+>p6
+
+>Ns.
+
+
+So we're dealing with Python pickling here, which is essentially the process where a Python object hierarchy is converted into a byte/character stream. Its used for serializing/deserializing a Python object structure. The object is serialized first before being written to a file. For more info on pickling: ![this link](https://pythontips.com/2013/08/02/what-is-pickle-in-python/) and ![this link](https://docs.python.org/2/library/pickle.html#)
+
+What I did was visit the `/admin` webpage again with BurpSuite open this time.
+
+Under Target > Site map looking at the GET request to /admin displays the hashed cookie value named obsoletePickle again.
+
+BurpSuite also has a built-in Decoder option that gets us the same value as using the web decoder.
+
+The next step was to decode the String in Python.
+
+Running Python on the terminal, decoding the String told us the user was set to 'None'
+> `$ python`
+
+> `>>> import pickle`
+
+> `>>> import base64`
+
+> `>>> pickle.loads('KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu'.decode('base64'))`
+
+> `{'python': 'pickles', 'subtle': 'hint', 'user': None}`
