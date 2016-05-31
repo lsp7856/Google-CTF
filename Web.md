@@ -197,7 +197,7 @@ Another thing to note, when logging in, we can see the site is communicating wit
 >/api/users/login?domain=
 
 ##Spotted Quoll
->![This](https://spotted-quoll.ctfcompetition.com/) blog on Zombie research looks like it might be interesting - can you break into the /admin section?
+>[This](https://spotted-quoll.ctfcompetition.com/) blog on Zombie research looks like it might be interesting - can you break into the /admin section?
 
 We're brought to a blog page "My Zombie Research Project"
 
@@ -215,7 +215,7 @@ When going to this page though, it is blank. Even its source code is empty. It s
 If we look at the cookies being stored on this blog's homepage we see that there is one titled `obsoletePickle`
 >`Content: KGRwMQpTJ3B5dGhvbicKcDIKUydwaWNrbGVzJwpwMwpzUydzdWJ0bGUnCnA0ClMnaGludCcKcDUKc1MndXNlcicKcDYKTnMu`
 
-When we decode this hashed value using an online decoder such as ![this one](https://www.base64decode.org/) we get this:
+When we decode this hashed value using an online decoder such as [this one](https://www.base64decode.org/) we get this:
 >(dp1
 
 >S'python'
@@ -241,7 +241,7 @@ When we decode this hashed value using an online decoder such as ![this one](htt
 >Ns.
 
 
-So we're dealing with Python pickling here, which is essentially the process where a Python object hierarchy is converted into a byte/character stream. Its used for serializing/deserializing a Python object structure. The object is serialized first before being written to a file. For more info on pickling: ![this link](https://pythontips.com/2013/08/02/what-is-pickle-in-python/) and ![this link](https://docs.python.org/2/library/pickle.html#)
+So we're dealing with Python pickling here, which is essentially the process where a Python object hierarchy is converted into a byte/character stream. Its used for serializing/deserializing a Python object structure. The object is serialized first before being written to a file. For more info on pickling: [this link](https://pythontips.com/2013/08/02/what-is-pickle-in-python/) and [this link](https://docs.python.org/2/library/pickle.html#)
 
 What I did was visit the `/admin` webpage again with BurpSuite open this time.
 
